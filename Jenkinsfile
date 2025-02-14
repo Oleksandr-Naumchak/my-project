@@ -5,7 +5,7 @@ pipeline {
         REPO_URL = 'git@github.com:Oleksandr-Naumchak/my-project.git' 
         BRANCH = 'main'
         REMOTE_USER = 'jenkins'
-        REMOTE_HOST = '176.100.12.164'  // Change to your VM's IP
+        REMOTE_HOST = '1c-dev01.ajax.local'  // Change to your VM's IP
     }
 
     stages {
