@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         REPO_URL = 'https://github.com/Oleksandr-Naumchak/my-project.git' 
-        BRANCH = 'main'
+        BRANCH = 'master'
         REMOTE_USER = 'jenkins'
         REMOTE_HOST = '1c-dev01.ajax.local'  // Change to your VM's IP
     }
