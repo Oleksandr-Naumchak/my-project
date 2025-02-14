@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REPO_URL = 'git@github.com:Oleksandr-Naumchak/my-project.git' 
+        REPO_URL = 'https://github.com/Oleksandr-Naumchak/my-project.git' 
         BRANCH = 'main'
         REMOTE_USER = 'jenkins'
         REMOTE_HOST = '1c-dev01.ajax.local'  // Change to your VM's IP
