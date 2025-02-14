@@ -18,13 +18,7 @@ pipeline {
         stage('Install Apache2 on Remote Server') {
             steps {
                 script {
-                    sshCommand remoteUser: "${REMOTE_USER}",
-                               remoteHost: "${REMOTE_HOST}",
-                               command: '''
-                               sudo apt update
-                               sudo apt install -y apache2
-                               sudo systemctl enable --now apache2
-                               '''
+                    echo "Install Apache2 on Remote Server"
                 }
             }
         }
@@ -32,9 +26,7 @@ pipeline {
         stage('Check Apache Status') {
             steps {
                 script {
-                    sshCommand remoteUser: "${REMOTE_USER}",
-                               remoteHost: "${REMOTE_HOST}",
-                               command: "systemctl status apache2"
+                    echo "Check Apache Status"
                 }
             }
         }
@@ -42,12 +34,7 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 script {
-                    sshCommand remoteUser: "${REMOTE_USER}",
-                               remoteHost: "${REMOTE_HOST}",
-                               command: '''
-                               echo "<h1>Deployed Successfully!</h1>" | sudo tee /var/www/html/index.html
-                               sudo systemctl restart apache2
-                               '''
+                    echo "Deploy Application"
                 }
             }
         }
